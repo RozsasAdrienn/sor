@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Verdana, sans-serif;
+    color: beige;
+    font-size: 10pt;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-image: url("teglafal.jpg");
+}
+
+header
+{
+    grid-area: h;
+    background-image: url("beer.jpg");
+    height: 300px;
+    background-size: cover;
+}
+
+header h1{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+   /*15.	A betűk közti távolság 4px, a betűméret 32px, legyen balra igazítva, és felső és a bal oldali belső margó 30px. */
+   letter-spacing: 4px;
+   font-size: 32px;
+   text-align: left;
+   margin-top: 30px;
+   margin-left: 30px;
+}
+article{
+    grid-area: ar;
+}
+aside{
+    grid-area: as;
+}
+footer{
+    grid-area: f;
+}
+main{
+    width: 80%;
+    max-width: 1000px;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+    ' h h'
+    'ar as'
+    'f f'
+    ;
+    background-color: rgb(51, 51, 51);
+}
+
+nav a{
+   display: block;
+   text-decoration: none;
+   color: red;
+   font-weight: bold;
+   padding: 5px;
+   padding-left: 15px;
+}
+
+nav li{
+    list-style-type: none;
+    border: white 1px solid;
+    border-radius: 10px;
+    
+}
+
+nav li:hover{
+   background-color: lightgoldenrodyellow; 
+}
+
+a:hover{
+    color: white;
+}
+
+article p{
+    font-size: 15px;
+}
+
+article h3{
+    font-size: 20px;
+}
+
+article img{
+    height: 30%;
+    width: auto;
+    float: left;/*ellentmondás a mintában és az utasításban balra úztatjuk*/
+
+}
+
+article li{
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+@media only screen and (max-width: 700px) {
+    main *{
+        display: block;
+    }
+}
